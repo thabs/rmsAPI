@@ -1,0 +1,55 @@
+{
+  "name": "rms",
+  "version": "1.0.0",
+  "description": "Remote Metering Solutions client",
+  "private": true,
+  "main": "dist/index.js",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
+    "classnames": "2.2.6",
+    "formik": "^2.1.5",
+    "history": "4.9.0",
+    "http-proxy-middleware": "^1.0.4",
+    "material-table": "^1.59.0",
+    "perfect-scrollbar": "1.4.0",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-chartjs-2": "^2.9.0",
+    "react-dom": "16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-swipeable-views": "0.13.3",
+    "yup": "^0.29.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 10",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/*index.js",
+      "!src/serviceWorker.js",
+      "!src/polyfill.js"
+    ]
+  },
+  "engines": {
+    "node": ">=8.16",
+    "npm": ">=6"
+  }
+}
