@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Remote Metering Solutions API",
   "main": "index.js",
+  "engines": {
+    "node": "12.14.0",
+    "npm": "6.13.4"
+  },
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js --ignore 'client/*.js'",
