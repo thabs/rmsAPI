@@ -12,10 +12,11 @@ const redisClient =
 redisClient.get = promisify(redisClient.get);
 
 module.exports.setCache = (key, value) => {
-  redisClient.set(key, JSON.stringify(value));
+  if (redisClient) redisClient.set(key, JSON.stringify(value));
 };
 
 module.exports.getCache = async (key) => {
+  if (!redisClient) return null;
   const cache = await redisClient.get(key);
   if (cache) {
     const value = JSON.parse(cache);

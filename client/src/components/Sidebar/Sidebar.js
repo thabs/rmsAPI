@@ -12,7 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Icon from '@material-ui/core/Icon';
 
-import styles from 'assets/jss/material-dashboard-react/components/sidebarStyle.js';
+import styles from './sidebarStyle';
 const useStyles = makeStyles(styles);
 
 export default function Sidebar(props) {
@@ -21,7 +21,7 @@ export default function Sidebar(props) {
   function activeRoute(routeName) {
     return window.location.href.indexOf(routeName) > -1 ? true : false;
   }
-  const {color, logo, image, logoText, routes} = props;
+  const {color, image, routes} = props;
   var links = (
     <List className={classes.list}>
       {routes.map((prop, key) => {
@@ -115,12 +115,9 @@ export default function Sidebar(props) {
 }
 
 Sidebar.propTypes = {
-  rtlActive: PropTypes.bool,
   handleDrawerToggle: PropTypes.func,
   bgColor: PropTypes.oneOf(['purple', 'blue', 'green', 'orange', 'red']),
-  logo: PropTypes.string,
   image: PropTypes.string,
-  logoText: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object),
   open: PropTypes.bool,
 };

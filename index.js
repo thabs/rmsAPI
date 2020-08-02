@@ -60,7 +60,5 @@ if (process.env.NODE_ENV === 'production') {
 
 const PORT = process.env.SERVER_PORT || 5000;
 app.listen(PORT, () => {
-  logger.info(
-    'Remote Metering Solutions APhone API Listening on Port: ' + PORT,
-  );
+  logger.info('Remote Metering Solutions API Listening on Port: ' + PORT);
 });
