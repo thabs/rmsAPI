@@ -3,6 +3,7 @@ const express = require('express');
 const helmet = require('helmet');
 const RateLimit = require('express-rate-limit');
 const bodyParser = require('body-parser');
+const path = require('path');
 const cors = require('cors');
 const HttpStatus = require('http-status-codes');
 const swaggerJSDoc = require('swagger-jsdoc');
