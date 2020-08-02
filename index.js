@@ -27,7 +27,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //! REDIS CACHE
-require('./services/cache');
+//require('./services/cache');
 
 //! Swagger
 const swaggerSpec = swaggerJSDoc(swaggerDoc);

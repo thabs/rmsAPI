@@ -5,7 +5,7 @@ import {Router, Route, Switch, Redirect} from 'react-router-dom';
 //! Data providers
 import {MeterProvider} from './features/meterSearch';
 // core components
-import Admin from 'layouts/Admin.js';
+import Home from './containers/Home';
 import 'index.css';
 
 const hist = createBrowserHistory();
@@ -14,8 +14,8 @@ ReactDOM.render(
   <Router history={hist}>
     <MeterProvider>
       <Switch>
-        <Route path="/admin" component={Admin} />
-        <Redirect from="/" to="/admin/linegraph" />
+        <Route path="/rms" component={Home} />
+        <Redirect from="/" to="/rms/linegraph" />
       </Switch>
     </MeterProvider>
   </Router>,

@@ -11,7 +11,7 @@ import Sidebar from 'components/Sidebar/Sidebar.js';
 
 import routes from 'routes.js';
 
-import styles from './adminStyle';
+import styles from './homeStyle';
 
 import bgImage from 'assets/img/sidebar.jpg';
 
@@ -20,7 +20,7 @@ let ps;
 const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
-      if (prop.layout === '/admin') {
+      if (prop.layout === '/rms') {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -31,7 +31,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/admin" to="/admin/linegraph" />
+    <Redirect from="/rms" to="/rms/linegraph" />
   </Switch>
 );
 
@@ -43,8 +43,8 @@ export default function Admin({...rest}) {
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
-  const [image, setImage] = React.useState(bgImage);
-  const [color, setColor] = React.useState('blue');
+  const [image] = React.useState(bgImage);
+  const [color] = React.useState('blue');
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {

@@ -13,28 +13,28 @@ const dashboardRoutes = [
     name: 'Meter Data',
     icon: DashboardIcon,
     component: MeterData,
-    layout: '/admin',
+    layout: '/rms',
   },
   {
     path: '/linegraph',
     name: 'WH Vs VARH Graph',
     icon: BarChartIcon,
     component: LineGraph,
-    layout: '/admin',
+    layout: '/rms',
   },
   {
     path: '/whgraph',
     name: 'WH Graph',
     icon: BarChartIcon,
     component: WHGraph,
-    layout: '/admin',
+    layout: '/rms',
   },
   {
     path: '/varhraph',
     name: 'VARH Graph',
     icon: BarChartIcon,
     component: VARHGraph,
-    layout: '/admin',
+    layout: '/rms',
   },
 ];
 

@@ -8,8 +8,11 @@ const csvFilePath = 'metering_data.csv';
 module.exports.readMeterData = async (req, res, next) => {
   try {
     const {serialNum} = req.params;
+
     //! Lets check if the data is available in the cache
-    const data = await getCache(serialNum); //! Lets check the reading in the cache
+    //const data = await getCache(serialNum); //! Lets check the reading in the cache
+    //! We not using caching, REDIS will need to be installed on Test Machine
+    let data = null;
 
     if (!data) {
       // Async / await usage
@@ -25,7 +28,7 @@ module.exports.readMeterData = async (req, res, next) => {
       }
 
       //! Lets cache the data for the next reading
-      setCache(serialNum, filtered);
+      //setCache(serialNum, filtered);
       return res.send(filtered);
     }
 

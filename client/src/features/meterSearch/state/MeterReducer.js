@@ -17,7 +17,6 @@ const setData = (state, payload) => {
 
   payload.forEach((element) => {
     //! Lets get the data labels
-    const date = element.ReadingDateTimeUTC.split(' ');
     labels.push(element.ReadingDateTimeUTC);
 
     wh.push(element.WH);
