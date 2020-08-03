@@ -6,14 +6,14 @@ import 'perfect-scrollbar/css/perfect-scrollbar.css';
 // @material-ui/core components
 import {makeStyles} from '@material-ui/core/styles';
 // core components
-import Navbar from 'components/Navbars/Navbar.js';
-import Sidebar from 'components/Sidebar/Sidebar.js';
+import Navbar from '../components/Navbars/Navbar';
+import Sidebar from '../components/Sidebar/Sidebar.js';
 
-import routes from 'routes.js';
+import routes from '../routes.js';
 
 import styles from './homeStyle';
 
-import bgImage from 'assets/img/sidebar.jpg';
+import bgImage from '../assets/img/sidebar.jpg';
 
 let ps;
 
