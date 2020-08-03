@@ -16,7 +16,7 @@ ReactDOM.render(
     <MeterProvider>
       <Switch>
         <Route path="/rms" component={Home} />
-        <Redirect from="/" to="/rms/linegraph" />
+        <Redirect from="/" to="/rms/meterdata" />
       </Switch>
     </MeterProvider>
   </Router>,
