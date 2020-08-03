@@ -64,22 +64,29 @@ const MeterSearch = () => {
       </Paper>
       <br />
       {errors?.serialNum && <Alert severity="error">{errors.serialNum}</Alert>}
-      <Modal open={loading}>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginTop: 300,
-          }}>
-          <CircularProgress color="secondary" />
-        </div>
-      </Modal>
+      {loading && (
+        <Modal
+          open={loading}
+          disableBackdropClick={true}
+          disableEscapeKeyDown={true}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: 300,
+            }}>
+            <CircularProgress color="secondary" />
+          </div>
+        </Modal>
+      )}
       {error && (
         <Dialog
           open={modal}
           aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description">
+          aria-describedby="alert-dialog-description"
+          disableBackdropClick={true}
+          disableEscapeKeyDown={true}>
           <DialogTitle id="alert-dialog-title">{'Meter Search'}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
